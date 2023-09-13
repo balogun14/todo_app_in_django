@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+  <a href="{% url 'todo_detail' todo.pk %}" class="btn">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" name="" id="" value="edit">
+  </form>
+{% endblock %}

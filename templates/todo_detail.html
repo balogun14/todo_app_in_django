@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <a href="{% url 'home' %}" class="btn">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="mt-5">
+    <p class="lead display-5">{{ todo.text }}</p>
+    <a href="{% url 'todo_edit' todo.pk  %}" class="btn btn-secondary">Edit</a>
+    <a href="{% url 'todo_delete' todo.pk %}" class="btn btn-danger">Delete</a>
+  </div>
+  {% comment %} <a href="{% url 'todo_edit' {{ todo.pk }} %}" class="btn btn-secondary">Edit</a>
+  <a href="{% url 'todo_delete' {{ todo.pk }} %}" class="btn btn-dangerous">Delete</a> {% endcomment %}
+{% endblock %}
