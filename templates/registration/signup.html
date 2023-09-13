@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+<h1 class="display-1">
+    Create An Account
+</h1>
+{% endblock title %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" name="" class="btn btn-success" value="Create An Account">
+</form>
+
+{% endblock content %}
+
+
+
+
